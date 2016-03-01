@@ -17,11 +17,12 @@ __global__ void SomeTransform(char *input_gpu, int fsize) {
 
 	if (input_gpu[idx] > 64 && input_gpu[idx] < 91)//big
 	{
-
+		//uppercase do nothing
 	}
 	else if (input_gpu[idx] > 96 && input_gpu[idx] < 123)//small
 	{
-		input_gpu[idx] -= 32;
+		//lowercase transfer to uppercase 
+		input_gpu[idx] -= 32; //
 	}
 	else if (input_gpu[idx] == 0) input_gpu[idx] = 32;
 	else
